@@ -1,0 +1,43 @@
+{
+  "name": "11up",
+  "description": "A quick start for 11ty sites",
+  "version": "0.0.0",
+  "author": "Phil Hawksworth @philhawksworth",
+  "bin": {
+    "11up": "./bin/run"
+  },
+  "bugs": "https://github.com/philhawksworth/11up/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.24.1",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/philhawksworth/11up",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "11up"
+  },
+  "repository": "philhawksworth/11up",
+  "scripts": {
+    "posttest": "eslint .",
+    "prepack": "oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
