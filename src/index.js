@@ -23,17 +23,19 @@ class ElevenUpCommand extends Command {
       }]);
       template = responses.template;
     }
-    const templateDir = `${process.cwd()}/templates/${template}`;
+    const templateDir = `${__dirname}/../templates/${template}`;
 
     // Specify a folder location
     let workingDirectory = flags.workingDirectory;
+    let targetDir;
     if (!workingDirectory) {
       let responses = await inquirer.prompt([{
         name: 'target',
         message: 'target directory for the new site?',
         type: 'input'
       }]);
-      workingDirectory = `${process.cwd()}/${responses.target}`;
+      targetDir = responses.target;
+      workingDirectory = `${process.cwd()}/${targetDir}`;
     }
 
 
@@ -46,19 +48,28 @@ class ElevenUpCommand extends Command {
 
     await fs.ensureDir(workingDirectory);
     await fs.copy(`${templateDir}/src`, `${workingDirectory}/src`);
-    console.log(` ${check} Source files copied:`, chalk.blue(workingDirectory));
+    console.log(` ${check} Template files copied`);
 
     await fs.copy(`${templateDir}/.gitignoreFile`, `${workingDirectory}/.gitignore`);
-    console.log(` ${check} .gitignore file added`);
+    console.log(` ${check} File added: .gitignore`);
     await fs.copy(`${templateDir}/README.md`, `${workingDirectory}/README.md`);
-    console.log(` ${check} README.md file added`);
+    console.log(` ${check} File added: README.md`);
     await fs.copy(`${templateDir}/package.json`, `${workingDirectory}/package.json`);
-    console.log(` ${check} package.json file added`);
-
-	console.log('🌱 All set! Let\'s get you started:');
-	console.log('');
-	console.log(`    cd ${responses.target}`);
-	console.log('    npm run serve');
+    console.log(` ${check} File added: package.json`);
+    await fs.copy(`${templateDir}/.eleventy.js`, `${workingDirectory}/.eleventy.js`);
+    console.log(` ${check} File added: .eleventy.js`);
+    console.log('');
+    console.log('✨ You\'ve got what you need. Let\'s go! ✨');
+    console.log('');
+    console.log(chalk.grey('   # Move to the working directory'));
+    console.log(`   cd ${targetDir}`);
+    console.log('');
+    console.log(chalk.grey('   # Install project dependencies'));
+    console.log('   npm install');
+    console.log('');
+    console.log(chalk.grey('   # Build, serve and watch your code'));
+    console.log('   npm run start');
+    console.log('');
 
 
   }
