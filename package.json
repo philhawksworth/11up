@@ -32,7 +32,7 @@
     "oclif"
   ],
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "index.js",
   "oclif": {
     "bin": "11up"
   },

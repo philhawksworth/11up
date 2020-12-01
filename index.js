@@ -23,7 +23,7 @@ class ElevenUpCommand extends Command {
       }]);
       template = responses.template;
     }
-    const templateDir = `${__dirname}/../templates/${template}`;
+    const templateDir = `${__dirname}/templates/${template}`;
 
     // Specify a folder location
     let workingDirectory = flags.workingDirectory;
