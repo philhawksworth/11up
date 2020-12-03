@@ -19,7 +19,7 @@ $ npm install -g 11up
 $ 11up COMMAND
 running command...
 $ 11up (-v|--version|version)
-11up/0.0.1 darwin-x64 node-v10.15.3
+11up/0.0.3 darwin-x64 node-v10.15.3
 $ 11up --help [COMMAND]
 USAGE
   $ 11up COMMAND

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const {Command, flags} = require('@oclif/command');
 const inquirer = require('inquirer');
 const fs = require('fs-extra');
