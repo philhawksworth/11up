@@ -6,6 +6,23 @@ const fs = require('fs-extra');
 const chalk = require('chalk');
 
 
+async function copyTemplate() {
+	console.log(`👋 Creating a new Eleventy website in ${process.cwd()}/temp`);
+	console.log('');
+	await fs.ensureDir(`${process.cwd()}/temp`);
+
+	console.log('🤖 Copying files over');
+	console.log('');
+
+	await fs.copy(`${__dirname}/templates/scaffold/src`, `${process.cwd()}/temp/src`);
+
+
+	console.log('🌱 All set! Let\'s get you started:');
+
+};
+
+
+
 class ElevenUpCommand extends Command {
   async run() {
 
@@ -40,38 +57,38 @@ class ElevenUpCommand extends Command {
       workingDirectory = `${process.cwd()}/${targetDir}`;
     }
 
+    copyTemplate();
+    // const gem = chalk.green('⬥');
+    // const check = chalk.green('✔');
 
-    const gem = chalk.green('⬥');
-    const check = chalk.green('✔');
+    // // Copy site starter templates into place
+    // console.log(`${gem} Creating a new Eleventy site in`, chalk.blue(workingDirectory));
+    // console.log(`${gem} Copying template:`, chalk.blue(template));
 
-    // Copy site starter templates into place
-    console.log(`${gem} Creating a new Eleventy site in`, chalk.blue(workingDirectory));
-    console.log(`${gem} Copying template:`, chalk.blue(template));
+    // await fs.ensureDir(workingDirectory);
+    // await fs.copy(`${templateDir}/src`, `${workingDirectory}/src`);
+    // console.log(` ${check} Template files copied`);
 
-    await fs.ensureDir(workingDirectory);
-    await fs.copy(`${templateDir}/src`, `${workingDirectory}/src`);
-    console.log(` ${check} Template files copied`);
-
-    await fs.copy(`${templateDir}/.gitignoreFile`, `${workingDirectory}/.gitignore`);
-    console.log(` ${check} File added: .gitignore`);
-    await fs.copy(`${templateDir}/README.md`, `${workingDirectory}/README.md`);
-    console.log(` ${check} File added: README.md`);
-    await fs.copy(`${templateDir}/package.json`, `${workingDirectory}/package.json`);
-    console.log(` ${check} File added: package.json`);
-    await fs.copy(`${templateDir}/.eleventy.js`, `${workingDirectory}/.eleventy.js`);
-    console.log(` ${check} File added: .eleventy.js`);
-    console.log('');
-    console.log('✨ You\'ve got what you need. Let\'s go! ✨');
-    console.log('');
-    console.log(chalk.grey('   # Move to the working directory'));
-    console.log(`   cd ${targetDir}`);
-    console.log('');
-    console.log(chalk.grey('   # Install project dependencies'));
-    console.log('   npm install');
-    console.log('');
-    console.log(chalk.grey('   # Build, serve and watch your code'));
-    console.log('   npm run start');
-    console.log('');
+    // await fs.copy(`${templateDir}/.gitignoreFile`, `${workingDirectory}/.gitignore`);
+    // console.log(` ${check} File added: .gitignore`);
+    // await fs.copy(`${templateDir}/README.md`, `${workingDirectory}/README.md`);
+    // console.log(` ${check} File added: README.md`);
+    // await fs.copy(`${templateDir}/package.json`, `${workingDirectory}/package.json`);
+    // console.log(` ${check} File added: package.json`);
+    // await fs.copy(`${templateDir}/.eleventy.js`, `${workingDirectory}/.eleventy.js`);
+    // console.log(` ${check} File added: .eleventy.js`);
+    // console.log('');
+    // console.log('✨ You\'ve got what you need. Let\'s go! ✨');
+    // console.log('');
+    // console.log(chalk.grey('   # Move to the working directory'));
+    // console.log(`   cd ${targetDir}`);
+    // console.log('');
+    // console.log(chalk.grey('   # Install project dependencies'));
+    // console.log('   npm install');
+    // console.log('');
+    // console.log(chalk.grey('   # Build, serve and watch your code'));
+    // console.log('   npm run start');
+    // console.log('');
 
 
   }
