@@ -1,19 +1,20 @@
 {
   "name": "11up",
   "description": "A quick start for 11ty sites",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Phil Hawksworth @philhawksworth",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": "index.js",
+  "homepage": "https://github.com/philhawksworth/11up",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philhawksworth/11up"
+  },
   "bugs": "https://github.com/philhawksworth/11up/issues",
   "dependencies": {
     "chalk": "^4.1.0",
     "fs-extra": "^9.0.1",
     "inquirer": "^7.3.3"
-  },
-  "homepage": "https://github.com/philhawksworth/11up",
-  "license": "MIT",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/philhawksworth/11up"
   }
 }
