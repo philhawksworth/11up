@@ -14,8 +14,8 @@ inquirer
       message: 'Choose your template',
       choices: [
         'Scaffold',
-        'EleventyOne',
-        'ElevenTail'
+        // 'EleventyOne',
+        // 'ElevenTail'
       ],
       filter: function (val) {
         return val.toLowerCase();
@@ -38,20 +38,19 @@ inquirer
 async function copyTemplate(template, dir) {
 
   const targetDir =`${process.cwd()}/${dir}`
-	console.log(`👋 Creating a new Eleventy website in ${process.cwd()}/${dir}`);
-	console.log('');
+  const blueCheck = chalk.cyan("✓");
+
+  console.log('');
+	console.log(`✨ Creating a new Eleventy website in ${process.cwd()}/${dir}`);
 	await fs.ensureDir(targetDir);
   
-  console.log('◆ Copying files');
-  console.log('');
 	await fs.copy(`${__dirname}/templates/${template}`, targetDir);
+  console.log(`${blueCheck} Template files copied`);
   
-	console.log('◆ Configuring .gitignore');
-  console.log('');
 	await fs.move(`${targetDir}/.gitignorefile`, `${targetDir}/.gitignore`);
-
+  console.log(`${blueCheck} .gitignore copied`);
   
-  console.log('✓ Donezo!');
+  console.log(`${blueCheck} Donezo!`);
   console.log('');
 	console.log(`To get started...`);
 	console.log(`👉 cd ${targetDir}`);
