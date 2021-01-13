@@ -1,14 +1,14 @@
 {
-  "name": "instagraph",
+  "name": "Phil Hawksworth's simplest, sassy 11ty scaffold ",
   "version": "1.0.0",
-  "description": "",
+  "description": "A basic scaffold for an 11ty site with Sass pipeline",
   "scripts": {
-    "build" : "eleventy",
-    "start" : "eleventy --serve",
-    "dev" : "ntl dev",
-    "dmc" : "ntl dev"
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "dev": "ntl dev",
+    "dmc": "ntl dev"
   },
-  "keywords": [],
+  "keywords": ["eleventy", "11ty", "scaffold", "ssg"],
   "author": "Phil Hawksworth <phil@netlify.com>",
   "license": "ISC",
   "dependencies": {

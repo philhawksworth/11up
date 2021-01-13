@@ -1,5 +1,5 @@
 const sass = require("sass");
-const fs = require("fs");
+const fs = require("fs-extra");
 
 
 module.exports = (eleventyConfig) => {
@@ -9,7 +9,6 @@ module.exports = (eleventyConfig) => {
 
   // watch the scss source files in case of need to regenerate
   eleventyConfig.addWatchTarget("src/scss/");
-  // eleventyConfig.addWatchTarget("src/site/");
 
   // Compile Sass before a build
   eleventyConfig.on("beforeBuild", () => {
@@ -18,6 +17,7 @@ module.exports = (eleventyConfig) => {
       sourceMap: false,
       outputStyle: "compressed",
     });
+    fs.ensureDirSync('dist/css/');
     fs.writeFile("dist/css/main.css", result.css, (err) => {
       if (err) throw err;
       console.log("CSS generated");
@@ -27,7 +27,7 @@ module.exports = (eleventyConfig) => {
   // where do things live?
   return {
     dir: {
-      input: "site",
+      input: "src/site",
       output: "dist"
     }
   };

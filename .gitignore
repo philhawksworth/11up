@@ -1,2 +1,4 @@
 temp
 node_modules
+dist
+templates/**/package-lock.json
