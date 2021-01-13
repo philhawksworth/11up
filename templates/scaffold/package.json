@@ -1,5 +1,5 @@
 {
-  "name": "Phil Hawksworth's simplest, sassy 11ty scaffold ",
+  "name": "simple-sassy-11ty-scaffold",
   "version": "1.0.0",
   "description": "A basic scaffold for an 11ty site with Sass pipeline",
   "scripts": {
