@@ -5,10 +5,11 @@ const chalk = require('chalk');
 const inquirer = require('inquirer');
 
 // Assemble a list of template options
+const templatesRoot = `${__dirname}/templates`
 let options = [];
-const templateDirs = fs.readdirSync("./templates");
+const templateDirs = fs.readdirSync(templatesRoot);
 templateDirs.forEach(folder => {
-  let package = require(`./templates/${folder}/package.json`);
+  let package = require(`${templatesRoot}/${folder}/package.json`);
   options.push({
     "name": `${package.name} (v${package.version})`,
     "value": folder
@@ -52,7 +53,7 @@ async function copyTemplate(template, dir) {
 	console.log(`✨ Creating a new Eleventy website in ${process.cwd()}/${dir}`);
 	await fs.ensureDir(targetDir);
   
-	await fs.copy(`${__dirname}/templates/${template}`, targetDir);
+	await fs.copy(`${templatesRoot}/${template}`, targetDir);
   console.log(`${blueCheck} template files copied`);
   console.log(`${blueCheck} package.json copied`);
   
