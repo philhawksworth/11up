@@ -6,7 +6,7 @@
 [dev] 
   publish = "dist"
   functions = "src/functions"
-  command = "eleventy --serve"
+  command = "npm run serve"
 
 [[redirects]]
   from = "/api/*"
