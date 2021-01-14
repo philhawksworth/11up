@@ -4,6 +4,7 @@
   "description": "A basic scaffold for an 11ty site with Sass pipeline and Netlify serverless functions",
   "scripts": {
     "build": "eleventy",
+    "serve": "eleventy --serve",
     "start": "npm run dev",
     "dev": "ntl dev",
     "dmc": "ntl dev"

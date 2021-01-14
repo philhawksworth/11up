@@ -4,8 +4,7 @@
   "description": "A basic scaffold for an 11ty site with Sass pipeline",
   "scripts": {
     "build": "eleventy",
-    "serve": "eleventy --serve",
-    "start": "npm run dev",
+    "start": "eleventy --serve",
     "dev": "ntl dev",
     "dmc": "ntl dev"
   },
