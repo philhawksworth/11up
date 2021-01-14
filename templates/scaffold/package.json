@@ -1,6 +1,6 @@
 {
   "name": "simple-sassy-11ty-scaffold",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A basic scaffold for an 11ty site with Sass pipeline",
   "scripts": {
     "build": "eleventy",

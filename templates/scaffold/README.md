@@ -1,5 +1,8 @@
 # 11ty Scaffold
 
-With
+A bare bones starting point for an 11ty site. With just:
 
-- Sass pipeline
+- Nunjucks template inheritance
+- Sass pipeline with SCSS
+- Responsive breakpoints via mixins
+- Image passthrough without optimisation

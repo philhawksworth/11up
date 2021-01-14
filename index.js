@@ -45,7 +45,8 @@ async function copyTemplate(template, dir) {
 	await fs.ensureDir(targetDir);
   
 	await fs.copy(`${__dirname}/templates/${template}`, targetDir);
-  console.log(`${blueCheck} Template files copied`);
+  console.log(`${blueCheck} template files copied`);
+  console.log(`${blueCheck} package.json copied`);
   
 	await fs.move(`${targetDir}/.gitignorefile`, `${targetDir}/.gitignore`);
   console.log(`${blueCheck} .gitignore copied`);
@@ -55,5 +56,5 @@ async function copyTemplate(template, dir) {
 	console.log(`To get started...`);
 	console.log(`👉 cd ${targetDir}`);
 	console.log(`👉 npm i`);
-	console.log(`👉 ntl start`);
+	console.log(`👉 npm start`);
 };
