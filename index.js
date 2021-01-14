@@ -2,7 +2,19 @@
 
 const fs = require('fs-extra');
 const chalk = require('chalk');
-var inquirer = require('inquirer');
+const inquirer = require('inquirer');
+
+// Assemble a list of template options
+let options = [];
+const templateDirs = fs.readdirSync("./templates");
+templateDirs.forEach(folder => {
+  let package = require(`./templates/${folder}/package.json`);
+  options.push({
+    "name": `${package.name} (v${package.version})`,
+    "value": folder
+  });
+});
+
 
 console.log(`Creating a new Eleventy website...`);
 
@@ -12,11 +24,7 @@ inquirer
       type: 'list',
       name: 'template',
       message: 'Choose your template',
-      choices: [
-        'Scaffold',
-        // 'EleventyOne',
-        // 'ElevenTail'
-      ],
+      choices: options,
       filter: function (val) {
         return val.toLowerCase();
       },
@@ -31,7 +39,7 @@ inquirer
     },
   ])
   .then((answers) => {
-    copyTemplate(answers.template, answers.working_dir)
+    copyTemplate(answers.template, answers.working_dir);
   });
 
 
