@@ -1,6 +1,8 @@
 # 11up
 
-Quickly bootstrap 11ty sites from some common templates
+![11up](11up-logo.jpg "11up")
+
+Quickly bootstrap 11ty sites from some basic templates
 
 ## Prerequisites
 
