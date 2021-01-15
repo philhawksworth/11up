@@ -15,13 +15,13 @@ No need to install this package, you can create a new site structure by using `n
 
 `npx 11up`
 
-- Choose one of the starter templates (there is just one for now)
+- Choose one of the starter templates (it's a short list for now)
 - Create your new site in the current directory or create a new subdirectory
 - That's it
 
 
 ## Updating for the latest version
 
-To ensure you have the latest templates, you can ask npm for the latest release as you execute `npx` like this:
+To ensure you always use the latest templates, you can ask npm for the latest release as you execute `npx` like this:
 
 `npx 11up@latest`
