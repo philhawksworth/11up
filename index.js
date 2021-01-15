@@ -50,20 +50,21 @@ async function copyTemplate(template, dir) {
   const blueCheck = chalk.cyan("✓");
 
   console.log('');
-	console.log(`✨ Creating a new Eleventy website in ${process.cwd()}/${dir}`);
-	await fs.ensureDir(targetDir);
-  
-	await fs.copy(`${templatesRoot}/${template}`, targetDir);
+  console.log(`✨ Creating a new Eleventy website in ${process.cwd()}/${dir}`);
+  console.log('');
+  await fs.ensureDir(targetDir);
+
+  await fs.copy(`${templatesRoot}/${template}`, targetDir);
   console.log(`${blueCheck} template files copied`);
   console.log(`${blueCheck} package.json copied`);
-  
-	await fs.move(`${targetDir}/.gitignorefile`, `${targetDir}/.gitignore`);
+
+  await fs.move(`${targetDir}/.gitignorefile`, `${targetDir}/.gitignore`);
   console.log(`${blueCheck} .gitignore copied`);
-  
+
   console.log(`${blueCheck} Donezo!`);
   console.log('');
-	console.log(`To get started...`);
-	console.log(`👉 cd ${targetDir}`);
-	console.log(`👉 npm i`);
-	console.log(`👉 npm start`);
+  console.log(`To get started...`);
+  console.log(`👉 cd ${targetDir}`);
+  console.log(`👉 npm i`);
+  console.log(`👉 npm start`);
 };
