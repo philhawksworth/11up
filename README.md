@@ -1,6 +1,6 @@
 # 11up
 
-![11up](11up-logo.jpg "11up")
+![11up](readme-images/11up-logo.jpg "11up")
 
 Quickly bootstrap 11ty sites from some basic templates
 
@@ -20,13 +20,13 @@ No need to install this package, you can create a new site structure by using `n
 - That's it
 
 
-![11up command](command.jpg "11up command")
+![11up command](readme-images/command.jpg "11up command")
 
-![Choose template](template-choice.jpg "Choose template")
+![Choose template](readme-images/template-choice.jpg "Choose template")
 
-![Set output location](output-dir.jpg "Set output location")
+![Set output location](readme-images/output-dir.jpg "Set output location")
 
-![New site scaffold created](complete.jpg "New site scaffold created")
+![New site scaffold created](readme-images/complete.jpg "New site scaffold created")
 
 
 ## Updating for the latest version
