@@ -20,6 +20,15 @@ No need to install this package, you can create a new site structure by using `n
 - That's it
 
 
+![11up command](command.jpg "11up command")
+
+![Choose template](template-choice.jpg "Choose template")
+
+![Set output location](output-dir.jpg "Set output location")
+
+![New site scaffold created](complete.jpg "New site scaffold created")
+
+
 ## Updating for the latest version
 
 To ensure you always use the latest templates, you can ask npm for the latest release as you execute `npx` like this:
