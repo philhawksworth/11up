@@ -1,3 +1,6 @@
 [submodule "templates/scaffold_with_sass"]
 	path = templates/scaffold_with_sass
 	url = git@github.com:philhawksworth/11ty-scaffold-with-sass.git
+[submodule "templates/scaffold_with_serverless"]
+	path = templates/scaffold_with_serverless
+	url = git@github.com:philhawksworth/11ty-with-serverless.git
