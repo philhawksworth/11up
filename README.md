@@ -16,7 +16,7 @@ The list of templates will slowly grow. Currently available via 11up:
 ## Prerequisites
 
 - [Node and npm](https://nodejs.org) - For running the command and using [11ty](https://11ty.dev)
-- [Netlify CLI](https://github.com/netlify/cli) - For development and serverless pipeline with Netlify
+- [Netlify CLI](https://github.com/netlify/cli) - For dev utilities like [serverless functions](https://www.netlify.com/products/functions/?utm_source=github&utm_medium=11up-pnh&utm_campaign=devex) on Netlify.
 
 ## Usage
 
