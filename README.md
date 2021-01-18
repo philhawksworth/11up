@@ -2,12 +2,21 @@
 
 ![11up](https://user-images.githubusercontent.com/5865/104914612-51a29a80-5987-11eb-9937-068e425ef3b5.jpg "11up")
 
-Quickly bootstrap 11ty sites from some basic templates
+Quickly bootstrap 11ty sites from some basic templates.
+
+
+## Project templates
+
+The list of templates will slowly grow. Currently available via 11up:
+
+- https://github.com/philhawksworth/11ty-scaffold-with-sass
+- https://github.com/philhawksworth/11ty-with-serverless
+
 
 ## Prerequisites
 
-- [Node and npm](https://nodejs.org)
-- [Netlify CLI](https://github.com/netlify/cli)
+- [Node and npm](https://nodejs.org) - For running the command and using [11ty](https://11ty.dev)
+- [Netlify CLI](https://github.com/netlify/cli) - For development and serverless pipeline with Netlify
 
 ## Usage
 
