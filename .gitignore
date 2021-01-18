@@ -1,4 +1,4 @@
-temp
+.DS_Store
 node_modules
 dist
 templates/**/package-lock.json
