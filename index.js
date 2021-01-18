@@ -57,8 +57,6 @@ async function copyTemplate(template, dir) {
   await fs.copy(`${templatesRoot}/${template}`, targetDir);
   console.log(`${blueCheck} template files copied`);
   console.log(`${blueCheck} package.json copied`);
-
-  await fs.move(`${targetDir}/.gitignorefile`, `${targetDir}/.gitignore`);
   console.log(`${blueCheck} .gitignore copied`);
 
   console.log(`${blueCheck} Done-zo!`);
