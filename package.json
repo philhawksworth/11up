@@ -2,7 +2,7 @@
   "name": "11up",
   "description": "A quick start for 11ty sites",
   "keywords": ["Eleventy", "11ty", "SSG", "Jamstack", "Template", "Scaffold", "Util", "CLI"],
-  "version": "0.1.12",
+  "version": "0.1.13",
   "author": "Phil Hawksworth @philhawksworth",
   "license": "MIT",
   "main": "index.js",
