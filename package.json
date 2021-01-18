@@ -1,7 +1,7 @@
 {
   "name": "11up",
   "description": "A quick start for 11ty sites",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "author": "Phil Hawksworth @philhawksworth",
   "license": "MIT",
   "main": "index.js",

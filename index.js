@@ -61,7 +61,7 @@ async function copyTemplate(template, dir) {
   await fs.move(`${targetDir}/.gitignorefile`, `${targetDir}/.gitignore`);
   console.log(`${blueCheck} .gitignore copied`);
 
-  console.log(`${blueCheck} Donezo!`);
+  console.log(`${blueCheck} Done-zo!`);
   console.log('');
   console.log(`To get started...`);
   console.log(`👉 cd ${targetDir}`);
