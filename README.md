@@ -30,13 +30,13 @@ No need to install this package, you can create a new site structure by using `n
 - That's it
 
 
-![11up command](https://user-images.githubusercontent.com/5865/104914515-2ddf5480-5987-11eb-900d-64845871ed2e.jpg "11up command")
+![11up command](https://user-images.githubusercontent.com/5865/105028378-dd303000-5a48-11eb-9b03-35adecf20a6c.jpg "11up command")
 
-![Choose template](https://user-images.githubusercontent.com/5865/104914537-320b7200-5987-11eb-8878-c6c63d89d3bc.jpg "Choose template")
+![Choose template](https://user-images.githubusercontent.com/5865/105028403-e4efd480-5a48-11eb-8d67-4ad8a28fd7ee.jpg "Choose template")
 
-![Set output location](https://user-images.githubusercontent.com/5865/104914528-30da4500-5987-11eb-9cad-6933d75a0b02.jpg "Set output location")
+![Set output location](https://user-images.githubusercontent.com/5865/105028427-eb7e4c00-5a48-11eb-8795-2dbd162db166.jpg "Set output location")
 
-![New site scaffold created](https://user-images.githubusercontent.com/5865/104914521-2fa91800-5987-11eb-9a2a-12ef92c93ae6.jpg "New site scaffold created")
+![New site scaffold created](https://user-images.githubusercontent.com/5865/105028434-ede0a600-5a48-11eb-8a93-3ab77661dfed.jpg "New site scaffold created")
 
 
 ## Updating for the latest version
