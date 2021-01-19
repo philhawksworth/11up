@@ -4,3 +4,6 @@
 [submodule "templates/scaffold_with_serverless"]
 	path = templates/scaffold_with_serverless
 	url = git@github.com:philhawksworth/11ty-with-serverless.git
+[submodule "templates/eleventy-base-blog"]
+	path = templates/eleventy-base-blog
+	url = git@github.com:11ty/eleventy-base-blog.git
