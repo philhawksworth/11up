@@ -12,6 +12,7 @@ The list of templates will slowly grow. Currently available via 11up:
 - https://github.com/philhawksworth/11ty-scaffold-with-sass
 - https://github.com/philhawksworth/11ty-with-serverless
 - https://github.com/11ty/eleventy-base-blog
+- https://github.com/5t3ph/11ty-netlify-jumpstart
 
 
 ## Prerequisites

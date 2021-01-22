@@ -7,3 +7,6 @@
 [submodule "templates/eleventy-base-blog"]
 	path = templates/eleventy-base-blog
 	url = git@github.com:11ty/eleventy-base-blog.git
+[submodule "templates/11ty-netlify-jumpstart"]
+	path = templates/11ty-netlify-jumpstart
+	url = git@github.com:5t3ph/11ty-netlify-jumpstart.git
