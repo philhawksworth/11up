@@ -4,6 +4,13 @@ const fs = require('fs-extra');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 
+
+// normalise up any complex URLs
+function urlify(str) {
+  var url = new URL(str);
+  return `https://${url.hostname}${url.pathname}`;
+}
+
 // Assemble a list of template options
 const templatesRoot = `${__dirname}/templates`
 let templates = [];
@@ -12,7 +19,7 @@ templateDirs.forEach(folder => {
   let package = require(`${templatesRoot}/${folder}/package.json`);
   templates.push({
     "name": `${package.name} (v${package.version})`,
-    "url": package.repository.url.replace("git://", "https://"),
+    "url": urlify(package.repository.url),
     "description": package.description,
     "version": package.version,
     "value": folder
@@ -78,7 +85,7 @@ async function copyTemplate(template, dir) {
 
   // Credit the original
   const { repository } = require(`${targetDir}/package.json`);
-  const repoURL = repository.url.replace("git://", "https://");
+  const repoURL = urlify(repository.url);
   console.log(chalk.green(`✨ Template sourced from ${repoURL}`));
   console.log('');
 
