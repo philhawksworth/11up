@@ -69,15 +69,26 @@ inquirer
 async function copyTemplate(template, dir) {
   const targetDir =`${process.cwd()}/${dir}`
   const greenCheck = chalk.green("✓");
+  
+  // Copy the template
   console.log('');
   console.log(chalk.green(`✨ Creating a new Eleventy website in ${process.cwd()}/${dir}`));
-  console.log('');
   await fs.ensureDir(targetDir);
   await fs.copy(`${templatesRoot}/${template}`, targetDir);
+
+  // Credit the original
+  const { repository } = require(`${targetDir}/package.json`);
+  const repoURL = repository.url.replace("git://", "https://");
+  console.log(chalk.green(`✨ Template sourced from ${repoURL}`));
+  console.log('');
+
+  // Inform of some file arrivals
   console.log(`${greenCheck} template files copied`);
   console.log(`${greenCheck} package.json copied`);
   console.log(`${greenCheck} .gitignore copied`);
   console.log(chalk.green("✓ Done-zo!"));
+  
+  // Giddy up
   console.log('');
   console.log(`To get started...`);
   console.log('');
