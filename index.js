@@ -82,13 +82,14 @@ async function copyTemplate(template, dir) {
   console.log(chalk.green(`✨ Creating a new Eleventy website in ${process.cwd()}/${dir}`));
   await fs.ensureDir(targetDir);
   await fs.copy(`${templatesRoot}/${template}`, targetDir);
-
+  await fs.copy(`${templatesRoot}/${template}/.gitignore`, `${targetDir}/.gitignore`);
+  
   // Credit the original
   const { repository } = require(`${targetDir}/package.json`);
   const repoURL = urlify(repository.url);
   console.log(chalk.green(`✨ Template sourced from ${repoURL}`));
   console.log('');
-
+  
   // Inform of some file arrivals
   console.log(`${greenCheck} template files copied`);
   console.log(`${greenCheck} package.json copied`);
